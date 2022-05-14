@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: rgba(0, 0, 0, 0.877);
+        }
+        div{
+            margin: 10px;
+        }
+        .MeNu{
+            background: rgb(116, 49, 49);
+            width: 100%;
+            border-radius: 12px;
+        }
+        .MeNu td{
+            background-color: rgb(116, 49, 49); 
+            border: 2px solid rgb(116, 49, 49);
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 0px 0px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+        .MeNu td:hover{
+            background-color: rgb(116, 49, 49);
+            color: black;
+        }
+
+        /* 设置下拉按钮的样式 */
+        .dropbtn {
+            background-color: rgb(116, 49, 49);
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            transition-duration: 0.4s;
+        }
+
+        /* 容器 <div> - 需要放置下拉内容 */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            /* transition-duration: 0.4s; */
+        }
+
+        /* 下拉内容（默认隐藏） */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            left: -10px;
+            background-color: #f9f9f9;
+            min-width: 100%; 
+            /* min-width: auto; */
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* 下拉链接 */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* 悬停时更改下拉链接的颜色 */
+        .dropdown-content a:hover,.dropdown-content div:hover {
+            background-color: gold;
+            border-radius: 12px;
+        }
+
+        /* 悬停时显示下拉菜单 */
+        .dropdown:hover .dropdown-content {
+            display: block;
+            background: rgb(116, 49, 49);
+            color: black;
+            border-radius: 12px;
+        }
+
+        /* 显示下拉内容时，更改下拉按钮的背景颜色 */
+        .dropdown:hover .dropbtn {
+            background-color: rgb(116, 49, 49);
+            color: black;
+        }
+        input{
+            font-size: 16px;
+        }
+
+        /*以下为3级下拉菜单*/
+        /* 设置下拉按钮的样式 */
+        .dropbtn2,.dropdown2{
+            margin: 0;
+            padding: 0;
+        }
+        .dropbtn2 {
+            background-color: rgb(116, 49, 49);
+            color: black;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            width: 90px;
+            border-radius: 12px;     
+            /* padding: 0;    */
+            height: 50px;
+            
+        }
+        .dropbtn2:hover{
+            background-color: gold;
+            border-radius: 12px;
+        }
+
+        /* 容器 <div> - 需要放置下拉内容 */
+        .dropdown2 {
+            position: relative;
+            display: inline-block;
+            /* padding: 0; */
+            /* transition-duration: 0.4s; */
+        }
+        /* 下拉内容（默认隐藏） */
+        .dropdown-content2 {
+            display: none;
+            position: absolute;
+            left: 70px;
+            top: -10px;
+            background-color: #f9f9f9;
+            min-width: 100%; 
+            /* min-width: auto; */
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* 下拉链接 */
+        .dropdown-content2 a {
+            color: black;
+            /* padding: 12px 16px; */
+            text-decoration: none;
+            display: block;
+        }
+
+        /* 悬停时更改下拉链接的颜色 */
+        .dropdown-content2 a:hover,.dropdown-content2 div:hover {
+            background-color: gold;
+            border-radius: 12px;
+        }
+
+        /* 悬停时显示下拉菜单 */
+        .dropdown2:hover .dropdown-content2 {
+            display: block;
+            background: rgb(116, 49, 49);
+            color: black;
+            border-radius: 12px;
+        }
+
+        /* 显示下拉内容时，更改下拉按钮的背景颜色 */
+        .dropdown2:hover .dropbtn2{
+            background-color: gold;
+            color: black;
+        }
+
+        .bottom{
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            color: white;
+            /* font-weight: ; */
+            background-color: rgb(116, 49, 49);
+            font-size: small;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+        .bottom:hover{
+            background-color: rgb(116, 49, 49);
+            border-radius: 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <table class="MeNu">
+            <tr>
+                <td class="dropdown">
+                    <button class="dropbtn" onclick="window.open('main.html')">首页</button>
+                        <div class="dropdown-content">
+                            <div class="dropdown2">
+                                <button class="dropbtn2" onclick="window.open('posts.html')">帖子</button>
+                                <!-- <div class="dropdown-content2">
+                                    <a href="">全部</a>
+                                    <a href="">算法</a>
+                                    <a href="">编程语言</a>
+                                    <a href="">开发工具</a>
+                                    <a href="">资源分享</a>
+                                    <a href="">杂项</a>
+                                </div> -->
+                            </div>
+                            <div class="dropdown2">
+                                <button class="dropbtn2" onclick="window.open('tools.html')">工具</button>
+                                <!-- <div class="dropdown-content2">
+                                    <a href="">多功能计算器</a>
+                                    <a href="">文本处理器</a>
+                                    <a href="">随机抽取器</a>
+                                    <a href="">乱数假文生成器</a>
+                                </div> -->
+                            </div>
+                            <div class="dropdown2">
+                                <button class="dropbtn2" onclick="window.open('about.html')">关于</button>
+                                <!-- <div class="dropdown-content2">
+                                    <a href="">关于我(们)</a>
+                                    <a href="">未来计划</a>
+                                    <a href="">个人技能</a>
+                                </div> -->
+                            </div>
+                            
+                        </div>
+                </td>
+                <td class="dropdown">
+                    <button class="dropbtn" onclick="window.open('posts.html')">帖子</button>
+                        <div class="dropdown-content">
+                            <a href="" onclick="window.open('posts.html')">全部</a>
+                            <a href="" onclick="window.open('posts.html?type=sc_alg')">算法</a>
+                            <a href="" onclick="window.open('posts.html?type=sc_lan')">编程语言</a>
+                            <a href="" onclick="window.open('posts.html?type=sc_dev')">开发工具</a>
+                            <a href="" onclick="window.open('posts.html?type=sc_res')">资源分享</a>
+                            <a href="" onclick="window.open('posts.html?type=sc_oth')">杂项</a>
+                        </div>
+                </td>
+                <td  class="dropdown">
+                    <button class="dropbtn" onclick="window.open('tools.html')">工具</button>
+                        <div class="dropdown-content">
+                            <a href="" onclick="window.open('tool0.html')">多功能计算器</a>
+                            <a href="" onclick="window.open('tool1.html')">文本处理器</a>
+                            <a href="" onclick="window.open('tool2.html')">随机抽取器</a>
+                            <a href="" onclick="window.open('tool3.html')">渐变色文本生成器</a>
+                        </div>
+                </td>
+                <td  class="dropdown">
+                    <button class="dropbtn" onclick="window.open('about.html')">关于</button>
+                        <div class="dropdown-content">
+                            <!-- <a href="">关于我(们)</a>
+                            <a href="">未来计划</a>
+                            <a href="">个人技能</a> -->
+                        </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
