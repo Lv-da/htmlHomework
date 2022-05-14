@@ -1,0 +1,331 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgba(0, 0, 0, 0.877);
+}
+div{
+    margin: 10px;
+}
+#Menu{
+    list-style: none;
+    float: left;
+    margin-top: px;
+    background: rgb(116, 49, 49);
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width:95%;    
+}
+#Menu li{
+    display: inline;
+    background-color: rgb(116, 49, 49); 
+    border: 2px solid rgb(116, 49, 49);
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px 0px;
+    /* transition-duration: 0.4s; */
+    cursor: pointer;
+}
+#Menu li:hover{
+    background-color: rgb(116, 49, 49);
+    color: black;
+}
+
+.MeNu{
+    background: rgb(116, 49, 49);
+    width: 100%;
+    border-radius: 12px;
+}
+.MeNu td{
+    background-color: rgb(116, 49, 49); 
+    border: 2px solid rgb(116, 49, 49);
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px 0px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.MeNu td:hover{
+    background-color: rgb(116, 49, 49);
+    color: black;
+}
+
+/* 设置下拉按钮的样式 */
+.dropbtn {
+    background-color: rgb(116, 49, 49);
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    transition-duration: 0.4s;
+}
+
+/* 容器 <div> - 需要放置下拉内容 */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    /* transition-duration: 0.4s; */
+}
+
+/* 下拉内容（默认隐藏） */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: -10px;
+    background-color: #f9f9f9;
+    min-width: 100%; 
+    /* min-width: auto; */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* 下拉链接 */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* 悬停时更改下拉链接的颜色 */
+.dropdown-content a:hover,.dropdown-content div:hover {
+    background-color: gold;
+    border-radius: 12px;
+}
+
+/* 悬停时显示下拉菜单 */
+.dropdown:hover .dropdown-content {
+    display: block;
+    background: rgb(116, 49, 49);
+    color: black;
+    border-radius: 12px;
+}
+
+/* 显示下拉内容时，更改下拉按钮的背景颜色 */
+.dropdown:hover .dropbtn {
+    background-color: rgb(116, 49, 49);
+    color: black;
+}
+input{
+    font-size: 16px;
+}
+
+/*以下为3级下拉菜单*/
+/* 设置下拉按钮的样式 */
+.dropbtn2,.dropdown2{
+    margin: 0;
+    padding: 0;
+}
+.dropbtn2 {
+    background-color: rgb(116, 49, 49);
+    color: black;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 90px;
+    border-radius: 12px;     
+    /* padding: 0;    */
+    height: 50px;
+    
+}
+.dropbtn2:hover{
+    background-color: gold;
+    border-radius: 12px;
+}
+
+/* 容器 <div> - 需要放置下拉内容 */
+.dropdown2 {
+    position: relative;
+    display: inline-block;
+    /* padding: 0; */
+    /* transition-duration: 0.4s; */
+}
+/* 下拉内容（默认隐藏） */
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    left: 70px;
+    top: -10px;
+    background-color: #f9f9f9;
+    min-width: 100%; 
+    /* min-width: auto; */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* 下拉链接 */
+.dropdown-content2 a {
+    color: black;
+    /* padding: 12px 16px; */
+    text-decoration: none;
+    display: block;
+}
+
+/* 悬停时更改下拉链接的颜色 */
+.dropdown-content2 a:hover,.dropdown-content2 div:hover {
+    background-color: gold;
+    border-radius: 12px;
+}
+
+/* 悬停时显示下拉菜单 */
+.dropdown2:hover .dropdown-content2 {
+    display: block;
+    background: rgb(116, 49, 49);
+    color: black;
+    border-radius: 12px;
+}
+
+/* 显示下拉内容时，更改下拉按钮的背景颜色 */
+.dropdown2:hover .dropbtn2{
+    background-color: gold;
+    color: black;
+}
+
+.bottom{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    color: white;
+    /* font-weight: ; */
+    background-color: rgb(116, 49, 49);
+    font-size: small;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+.bottom:hover{
+    background-color: rgb(116, 49, 49);
+    border-radius: 0;
+}
+/* .Button{
+    background-color: cornflowerblue; 
+    border: 1px solid cornflowerblue;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px 0px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.Button:hover{
+    background-color: lightskyblue;
+    color: black;
+    border: 1px solid lightskyblue;
+    box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+} */
+.maintitle{
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+}
+.allow_select {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+#mains,.mains {
+    height: auto;
+    background-color: rgba(247, 240, 228, 0.096);
+    border-radius: 12px;
+    padding-left: 6%;
+    padding-right: 4%;
+    padding-top: 8px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 5px;
+    /* margin-bottom: 48px; */
+    /* color: red; */
+}
+.title1 {
+    font-size: 28px;
+    font-weight: 700;
+    /* text-indent: 2em; */
+    display: block;
+    margin-bottom: 8px;
+    color: rgb(255, 255, 255);
+}
+.content1 {
+    display: block;
+    text-indent: 2em;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    /* margin-top: 6px; */
+}
+.mySwiper{
+    height: 150px;
+    
+}
+.mySwiper img{
+    height: 100px;
+    width: 200px;
+    
+    margin-left: 37%;
+}   
+.index_left {
+    float: left;
+    width: 40%;
+    background-color: rgba(247, 240, 228, 0.096);
+    border-radius: 12px;
+    margin-left: 5%;
+}
+.index_right {
+    float: left;
+    width: 40%;
+    margin-left: 8.5%;
+    margin-right: 5%;
+    background-color: rgba(247, 240, 228, 0.096);
+    border-radius: 12px;
+}
+.index_list li {
+    padding-top: 8px;
+    list-style-type: none;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+.index_list a {
+    text-decoration: none;
+    color: rgb(93, 150, 255);
+    transition: all 0.3s;
+    /* margin-top: 10px; */
+}
+.index_list a:hover {
+    color: goldenrod;
+    transition: all 0.3s;
+}
+.index_list {
+    /* position: relative; */
+    /* left: 15%; */
+    text-indent: 0;
+    font-size: 18px;
+    color: rgb(124, 170, 255);
+    word-spacing: 1em;
+}
+.title2 {
+    font-size: 24px;
+    font-weight: 700;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    color: rgb(43, 43, 175);
+}
